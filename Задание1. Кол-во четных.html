@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function countNumber(array){
+                var j = 0;
+                var k = 0;
+                var b = 0;
+                var f = 0;
+                document.write("Массив: " + "<br\/>");
+                for (let i = 0; i < array.length; i++){
+                if (( typeof(array[i]) == "string") || (typeof(array[i]) == "object")) {
+                f++;
+                } else if ((array[i] % 2 === 0) && (array[i] !==0 )){
+                        j++;
+                } else if ((array[i] % 2 !== 0) && (array[i] !==0 )) {
+                        k++;
+                        } else {
+                        b++;
+                        } 
+                document.write(array[i]+ ", "); 
+                };
+        
+                document.write("<br\/>");
+                document.write('Чётных чисел в массиве: '+ j+ "<br\/>");
+                document.write('Нечётных чисел в массиве: '+ k+ "<br\/>");
+                document.write('Нулевых чисел в массиве: '+ b+ "<br\/>"); 
+                document.write('Прочих значений в массиве: '+ f+ "<br\/>");  
+        }
+        var array = [1, 2, 4, 0, null, null, "str"];
+        countNumber(array);
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
